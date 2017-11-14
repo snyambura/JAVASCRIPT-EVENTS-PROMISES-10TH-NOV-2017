@@ -25,15 +25,15 @@ function submit_by_id() {
 
 //onmouseover event
 function over() {
-    document.getElementById("rent").innerHTML = "Input Rent";
+    document.getElementById("rent").write("Input Rent");
 
 }
 
 //onmouseout event
 function out() {
-    document.getElementById("rent").write("Input Rent");
+    document.getElementById("rent").write("");
 
-}
+};
 
 
 //promise
@@ -66,3 +66,14 @@ var replacemachine = new Promise(
 }
 
 inspectmachine();
+
+//custom events
+
+
+cancel.onclick = function() {
+    cancel.dispatchEvent(new CustomEvent("popup", {
+        bubbles: true
+    }));
+};
+
+document.addEventListener('popup', () => alert('Are you sure you want to cancel?'))

@@ -34,7 +34,7 @@
       <div class="grid-x grid-padding-x" >
         <div class="medium-12 cell">
           <label>House Rent
-            <input type="text" name="rent" id="rent" onmouseover="over()">
+            <input type="text" name="rent" id="rent" onmouseover="over()" onmouseout="out()">
           </label>
         </div>
       </div>
@@ -62,6 +62,10 @@
 
       <!--onclick event type-->
       <input type="button" name="submit_id" id="btn_id" value="Submit" onclick="submit_by_id()"/>
+
+      <!--<button id="cancel"> Cancel </button>-->
+        <input type="button" id="cancel" value="Cancel">
+
 
     </div>
   </form>
